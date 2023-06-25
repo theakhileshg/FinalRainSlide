@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainSlides</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body{
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: url("./img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+  
+h2{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+    font-size: 3vw;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+.card{
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+}
+.blue-text{color: #00BCD4}
+.form-control-label{margin-bottom: 0}
+input, textarea, button{
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300;
+}
+input:focus, textarea:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400;
+}
+.btn-block{
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer
+}
+.btn-block:hover{
+    color: #fff !important
+}
+button:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+    </style>
+    <div class="bg-image"></div>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <h2>Predicting Rainfall Induced Landslides</h2>
+                <div class="card">
+
+                    <form class="form-card" action="/" method="post">
+                    
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> <button type="" class="btn-block btn-primary">Munnar</button> </div>
+                        </div>
+
+                        <div class="row justify-content-left text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <select class="custom-select w-100" name="rain">
+                                    <option value="0" selected>Continuous rain</option>
+                                    <option value="1">Downpour</option>
+                                    <option value="2">Monsoon</option>
+                                    <option value="3">Rain</option>
+                                    <option value="4">Light Shower</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Slope of the area<span class="text-danger"> *</span></label> <input type="text" id="email" name="slope" placeholder="" onblur="validate(3)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Precipitation<span class="text-danger"> *</span></label> <input type="text" id="mob" name="precipitation" placeholder="" onblur="validate(4)"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Temperature<span class="text-danger"> *</span></label> <input type="text" id="email" name="temperature" placeholder="" onblur="validate(3)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Humidity<span class="text-danger"> *</span></label> <input type="text" id="mob" name="humidity" placeholder="" onblur="validate(4)"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Wind speed<span class="text-danger"> *</span></label> <input type="text" id="email" name="speed" placeholder="" onblur="validate(3)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Air Pressure in hPa<span class="text-danger"> *</span></label> <input type="text" id="mob" name="air" placeholder="" onblur="validate(4)"> </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">CHECK</button> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    </script>  
+</body>
+</html>
